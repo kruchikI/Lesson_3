@@ -27,7 +27,46 @@ while (x<=100){
 	x++;
 }
 
+	</script>
 
+	<script type="text/javascript">
+		//<!--Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.-->
+
+
+var	basket = [
+
+	{
+		title: 'Черные ресницы с1',
+		brend: 'Enigma',
+		price: 660.5,
+		count: 2
+	}, 
+
+	{
+		title: 'Коричневые ресницы с1',
+		brend: 'Lash',
+		price: 330.5,
+		count: 3
+	},
+
+	{
+		title: 'Цветные ресницы с1',
+		brend: 'Viv',
+		price: 789.5,
+		count: 1
+	}
+
+]
+
+function countBasketPrice (mas) {
+	var sumBasket=0;
+	for (var item of mas) {
+		sumBasket= sumBasket+(item.price*item.count)
+	}
+	return sumBasket;
+}
+
+console.log (countBasketPrice(basket))
 
 
 
