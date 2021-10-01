@@ -6,6 +6,71 @@
 	<title>Document</title>
 </head>
 <body>
+	<script type="text/javascript">
+		//<!--1.С помощью цикла while вывести все простые числа в промежутке от 0 до 100.-->
+var x=0; 
+function isNumber(numb) {
+	var i=2;
+	while (i < numb / 2) {
+		if (numb % i ==0) {
+			return false;
+		}
+		i++;
+	}
+	return true
+}
+
+while (x<=100){
+	if (isNumber(x)){
+		console.log (x)
+	}
+	x++;
+}
+
+	</script>
+
+	<script type="text/javascript">
+		//<!--Предположим, есть сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.-->
+
+
+var	basket = [
+
+	{
+		title: 'Черные ресницы с1',
+		brend: 'Enigma',
+		price: 660.5,
+		count: 2
+	}, 
+
+	{
+		title: 'Коричневые ресницы с1',
+		brend: 'Lash',
+		price: 330.5,
+		count: 3
+	},
+
+	{
+		title: 'Цветные ресницы с1',
+		brend: 'Viv',
+		price: 789.5,
+		count: 1
+	}
+
+]
+
+function countBasketPrice (mas) {
+	var sumBasket=0;
+	for (var item of mas) {
+		sumBasket= sumBasket+(item.price*item.count)
+	}
+	return sumBasket;
+}
+
+console.log (countBasketPrice(basket))
+
+
+
+	</script>
 	
 </body>
 </html>
